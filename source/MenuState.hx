@@ -17,6 +17,8 @@ class MenuState extends FlxState
 		//
 		this.t= new FlxText(0,0,0,"Hello");
 		this.add(this.t);
+		//
+		trace(FlxG.VERSION);
 	}
 
 	override public function update(elapsed:Float):Void
