@@ -26,7 +26,7 @@ class MenuState extends FlxState
 
 	private function init():Void
 	{
-		this.t= new FlxText(0,0,0,"Hello");
+		this.t= new FlxText(0,0,0,"Hello World !");
 		this.add(this.t);
 		//
 		trace(FlxG.VERSION);
@@ -42,5 +42,6 @@ class MenuState extends FlxState
 	{
 		trace('onButtonClick');
 		//trace(e);
+		FlxG.switchState(new PlayState());
 	}
 }
