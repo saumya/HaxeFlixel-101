@@ -14,9 +14,9 @@ class MenuState extends FlxState
 
 	override public function create():Void
 	{
-		super.create();
-		// My Experiement
 		this.init();
+		//
+		super.create();
 	}
 
 	override public function update(elapsed:Float):Void
@@ -30,8 +30,14 @@ class MenuState extends FlxState
 		this.add(this.t);
 		//
 		trace(FlxG.VERSION);
-		//
+		// type 1
+		/*
 		var myButton = new FlxButton(FlxG.width/2 , FlxG.height/2, "Lets Go", onButtonClick);
+		this.add(myButton);
+		*/
+		// type 2
+		var myButton = new FlxButton(0,0, "Lets Go", onButtonClick);
+		myButton.screenCenter();
 		this.add(myButton);
 
 		// Custom graphics
