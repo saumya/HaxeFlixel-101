@@ -16,6 +16,8 @@ package;
 	      //
 	      makeGraphic(16, 16, FlxColor.BLUE);
 	      this.drag.x = this.drag.y = 1600;
+	      //
+	     trace('this.velocity',this.velocity);
 	   }
 	   override public function update(elapsed:Float):Void
 	   {
@@ -62,8 +64,8 @@ package;
 				     mA = 0;
 				   }
 
-				   velocity.set(speed, 0);
- 						velocity.rotate(FlxPoint.weak(0, 0), mA);
+				  velocity.set(speed, 0);
+ 					velocity.rotate(FlxPoint.weak(0, 0), mA);
 				}
 				
 		 }
