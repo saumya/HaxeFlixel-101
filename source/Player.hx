@@ -14,7 +14,8 @@ package;
 	   {
 	      super(X, Y);
 	      //
-	      makeGraphic(16, 16, FlxColor.BLUE);
+	      //makeGraphic(16, 16, FlxColor.BLUE);
+	      loadGraphic(AssetPaths.player__png, true, 16, 16);
 	      this.drag.x = this.drag.y = 1600;
 	      //
 	     trace('this.velocity',this.velocity);
