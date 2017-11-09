@@ -26,7 +26,7 @@ class MenuState extends FlxState
 
 	private function init():Void
 	{
-		this.t= new FlxText(0,0,0,"Hello World !");
+		this.t= new FlxText(0,0,0,"Hello Flixel! Size-48",48);
 		this.add(this.t);
 		//
 		trace(FlxG.VERSION);
