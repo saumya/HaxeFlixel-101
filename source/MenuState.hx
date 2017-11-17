@@ -1,6 +1,7 @@
 package;
 
 import flixel.FlxG;
+import flixel.util.FlxColor;
 import flixel.FlxSprite;
 import flixel.FlxState;
 import flixel.text.FlxText;
@@ -14,7 +15,11 @@ class MenuState extends FlxState
 
 	override public function create():Void
 	{
+		
+
 		this.init();
+		//
+		FlxG.camera.fade(FlxColor.BLACK, .33, true); //fade-in
 		//
 		super.create();
 	}
@@ -48,6 +53,13 @@ class MenuState extends FlxState
 	{
 		trace('onButtonClick');
 		//trace(e);
-		FlxG.switchState(new PlayState());
+		//FlxG.switchState(new PlayState());
+
+		FlxG.camera.fade(FlxColor.BLACK,1.33, false, function()
+		{
+			FlxG.switchState(new PlayState()); //fade-out
+		});
+
+
 	}
 }

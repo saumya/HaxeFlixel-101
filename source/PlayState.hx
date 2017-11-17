@@ -32,8 +32,8 @@ class PlayState extends FlxState
 
  		//Camera follow the actor
  		FlxG.camera.follow(_player, TOPDOWN, 1);
-
-
+ 		//
+ 		FlxG.camera.fade(FlxColor.BLACK, 2.33, true); //fade-in
 
  		// final call
  		super.create();
