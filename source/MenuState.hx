@@ -55,10 +55,14 @@ class MenuState extends FlxState
 		//trace(e);
 		//FlxG.switchState(new PlayState());
 
+		FlxG.camera.flash();
+		FlxG.camera.shake(0.01, 0.2);
+		
 		FlxG.camera.fade(FlxColor.BLACK,1.33, false, function()
 		{
 			FlxG.switchState(new PlayState()); //fade-out
 		});
+		
 
 
 	}
